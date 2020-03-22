@@ -28,3 +28,16 @@ export function createBackgroundLayer(backgrounds, sprites) {
         context.drawImage(buffer, 0, 0)
     }
 }
+
+export function createSpriteLayer(entity) {
+    /**
+     * This higher order functions is called in the Compositor class 
+     * 
+     * this.layer.forEach(layer => {
+     *   layer(context)
+     * })
+     */
+    return function drawSpriteLayer(context) {
+        entity.draw(context)
+    }
+}
