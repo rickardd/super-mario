@@ -1,7 +1,7 @@
 import { Vec2 } from "./math.js"
 
 export class Trait {
-    constructor() {
+    constructor(name) {
         this.NAME = name
     }
 
@@ -23,13 +23,13 @@ export default class Entity {
     }
 
     addTrait(trait) {
-        this.traits.push(trait)
-        this[trait.NAME] = trait
+        this.traits.push(trait) // Adds the trait to the list. 
+        this[trait.NAME] = trait // Assigns the trait to this instance. 
     }
 
     update(deltaTime) {
-        this.traits.forEach(trait => {
-            trait.update(this, deltaTime)
+        this.traits.forEach(trait => { // loops all traits
+            trait.update(this, deltaTime) // runs the update function for each trait. 
         });
     }
 }
