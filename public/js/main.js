@@ -11,7 +11,7 @@ const context = canvas.getContext('2d');
 
 Promise.all([
     createMario(),
-    loadLevel('1-1'),
+    loadLevel('1-2'),
 ])
     .then(([mario, level]) => {
         const camera = new Camera()
@@ -20,8 +20,9 @@ Promise.all([
         mario.pos.set(64, 64);
 
         level.comp.layers.push(
-            createCollisionLayer(level),
-            createCameraLayer(camera)
+            // Debugging layers
+            // createCollisionLayer(level),
+            // createCameraLayer(camera)
         );
 
         level.entities.add(mario);
