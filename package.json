@@ -16,7 +16,7 @@
     "url": "https://github.com/rickardd/super-mario/issues"
   },
   "homepage": "https://github.com/rickardd/super-mario#readme",
-  "dependencies": {
+  "devDependencies": {
     "serve": "^11.3.0"
   }
 }
